@@ -1,6 +1,10 @@
 # bitnodes-export
 Node.js script that converts Bitnodes JSON into CSV format easily imported to Excel.
 
+```sh
+node export.js
+```
+
 [Bitnodes](https://bitnodes.earn.com/) is an excellent service that lists all public accessible Bitcoin nodes. The search engine built into Bitnodes is limited, so an option is to import data into Microsoft Excel, which has better features for search, filtering, graphs and more.
 
 Unfortunately the format is not 100% compatible with the Data import in Microsoft Excel, due to "null" values.
