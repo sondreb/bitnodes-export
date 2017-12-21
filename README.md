@@ -41,4 +41,4 @@ Bitnodes API: https://bitnodes.earn.com/api/
 
 This is free and unencumbered software released into the public domain.
 
-Read the [license](license).
+Read the [license](LICENSE).
