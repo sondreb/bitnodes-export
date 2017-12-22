@@ -32,10 +32,32 @@ node export.js default ;
 node export.js save
 ```
 
+## Screenshots
+
+1. Run the export.js using node in console/bash.
+![Run the export.js using node in console/bash.](docs/console.png)
+
+2. Choose the Data/Import CSV and pick the exported .csv file.
+![Choose the Data/Import CSV and pick the exported .csv file.](docs/excel-01.png)
+
+3. Pick UTF-8 as format and verify data being imported.
+![Pick UTF-8 as format and verify data being imported.](docs/excel-02.png)
+
+4. Data available in Excel, now you can filter, sort, create pivot tables and charts.
+![Data available in Excel, now you can filter, sort, create pivot tables and charts.](docs/excel-03.png)
+
 ## References
 
 Bitnodes API: https://bitnodes.earn.com/api/
 
+## Versions
+
+### 0.2 (2017-12-22)
+- Adds date formatting for "Connected since" column. 
+- Adds a separate "Coordinates" column, which can quickly be pasted into any map tools to show pins.
+
+### 0.1 (2017-12-21)
+- Initial release.
 
 ## License
 

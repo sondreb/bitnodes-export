@@ -36,10 +36,11 @@ const headers = [
     'Longitude',
     'Timezone',
     'ASN',
-    'Organization name'
+    'Organization name',
+    'Coordinates'
 ];
 
-console.log('Running Bitnodes export in mode "' + mode + '" with separator "' + separator + '"');
+console.log('Running Bitnodes Export (version 0.2) in mode "' + mode + '" with separator "' + separator + '"');
 
 const appendField = function (field) {
     if (!field) {
@@ -77,8 +78,18 @@ const parseJson = function (data, filename) {
         var node = data.nodes[ipAddress];
 
         for (var i = 0; i < node.length; i += 1) {
-            lines.push(appendField(node[i]));
+            if (i === 2) // Date
+            {
+                const date = new Date(node[i] * 1000);
+                lines.push(appendField(date.toISOString()));
+            }
+            else {
+                lines.push(appendField(node[i]));
+            }
         }
+
+        var gps = '"' + node[8] + ', ' + node[9] + '"';
+        lines.push(gps);
 
         fs.appendFileSync(path, lines.join(separator) + '\r\n');
     }
